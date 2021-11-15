@@ -16,6 +16,15 @@ render(
       <Route path="/" element={<App />}>
         <Route path="expenses" element={<Expenses />} />
         <Route path="invoices" element={<Invoices />}>
+          {/* Index route element uses the same route as parent, like a default child */}
+          <Route
+            index
+            element={
+              <main style={{ padding: '1rem' }}>
+                <p>Select an invoice</p>
+              </main>
+            }
+          />
           <Route path=':invoiceId' element={<Invoice />} />
         </Route>
         <Route
