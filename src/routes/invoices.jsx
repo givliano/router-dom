@@ -1,6 +1,5 @@
 import {
   Outlet,
-  NavLink,
   useSearchParams
 } from 'react-router-dom';
 import { getInvoices } from '../data';
